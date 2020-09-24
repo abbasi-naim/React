@@ -1,13 +1,14 @@
-import ReactDOM from 'react-dom'
-import React from 'react'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import './Style.css';
+
 
 const name = "Naim And Rana"
 const msg = <p>Welcome to {name} React Site!! </p>
 
-ReactDOM.render(
-    msg,
-    document.getElementById("root"));
+// ReactDOM.render(
+//     msg,
+//     document.getElementById("root"));
 /*
     let counter = 0 
     function show() {
@@ -124,7 +125,7 @@ function Item(props) {
   );
 
   //setState 
-
+/*
   class Counter extends React.Component{
       state = {
           counter : 0 
@@ -146,4 +147,18 @@ function Item(props) {
   ReactDOM.render(
       el,
       document.getElementById("root")
+  );
+*/
+
+  //Hook
+  function Hook() {
+    const [name, setName] = useState("DelaWare");
+  
+    return <h1>Welcome to {name} University.</h1>;
+  }
+  
+  const el = <Hook />; 
+  ReactDOM.render(
+    el, 
+    document.getElementById('root')
   );
