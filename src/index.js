@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './Style.css';
 
@@ -151,7 +151,7 @@ function Item(props) {
 */
 
   //Hook
-  function Hook() {
+ /* function Hook() {
     const [name, setName] = useState("DelaWare");
   
     return <h1>Welcome to {name} University.</h1>;
@@ -162,10 +162,14 @@ function Item(props) {
     elm, 
     document.getElementById('root')
   );
-
+*/
   // rewrite counter app using hook
   function Counter() {
     const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+        alert("Number of clicks: " + counter);
+      });
   
     function increment() {
       setCounter(counter+1);
