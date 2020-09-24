@@ -51,3 +51,14 @@ ReactDOM.render(
     helMsg,
     document.getElementById("root")
 );
+
+//Props   passing argument to function
+
+function Test (props) {
+return <p>{"A"+props.title}</p>;
+}
+const testMsg = <Test title="Z"/>;
+ReactDOM.render(
+    testMsg,
+    document.getElementById("root")
+);
