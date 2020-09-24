@@ -72,3 +72,11 @@ function Comp() {
     </h5>
     
 };
+
+//Props in class component
+
+class Mein extends React.Component{
+    render(){
+    return <p>Hello , {this.props.name}</p>;
+    }
+}
