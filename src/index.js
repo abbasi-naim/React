@@ -157,7 +157,26 @@ function Item(props) {
     return <h1>Welcome to {name} University.</h1>;
   }
   
-  const el = <Hook />; 
+  const elm = <Hook />; 
+  ReactDOM.render(
+    elm, 
+    document.getElementById('root')
+  );
+
+  // rewrite counter app using hook
+  function Counter() {
+    const [counter, setCounter] = useState(0);
+  
+    function increment() {
+      setCounter(counter+1);
+    }
+    return <div>
+    <p>{counter}</p>
+    <button onClick={increment}>Increment</button>
+    </div>;
+  }
+  
+  const el = <Counter />; 
   ReactDOM.render(
     el, 
     document.getElementById('root')
