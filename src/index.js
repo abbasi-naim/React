@@ -80,3 +80,27 @@ class Mein extends React.Component{
     return <p>Hello , {this.props.name}</p>;
     }
 }
+
+//Create Shopping List  Example
+function List() {
+    return <div>
+    <Item name="Cheese" price="4.50" ></Item>
+<Item name="Fruit" price="3.50"></Item>
+<Item name="gemuse" price="2.5"></Item>
+</div>
+}
+
+function Item(props) {
+    return <div className="item">
+    <b>Name:</b> {props.name} <br />
+    <b>Price:</b> ريال {props.price}
+    </div>;
+  }
+
+  const result = <List/>;
+
+  ReactDOM.render(
+      result,
+      document.getElementById("root")
+  );
+
