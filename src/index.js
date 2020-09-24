@@ -167,9 +167,13 @@ function Item(props) {
   function Counter() {
     const [counter, setCounter] = useState(0);
 
+    // useEffect(() => {
+    //     alert("Number of clicks: " + counter);
+    //   });
+// the useEffect() method will run only if count changes.
     useEffect(() => {
-        alert("Number of clicks: " + counter);
-      });
+        //do something
+      }, [counter]);  
   
     function increment() {
       setCounter(counter+1);
