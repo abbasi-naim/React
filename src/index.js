@@ -26,6 +26,7 @@ setInterval(show,2000);
 //1-functional component  2- class component
 //here is functional component example 
 
+/*
 function HelloWorld() {
     return <h1>Willkommen auf {name} Seite.</h1>
 }
@@ -34,4 +35,19 @@ ReactDOM.render(
     helloMsg,
     document.getElementById("root")
 );
+*/
 
+// here is example of class component
+
+class Hello extends React.Component{
+    render(){
+    return <h3>Welcome to {name} website!!</h3>;
+    }
+};
+
+const helMsg = <Hello/>;
+
+ReactDOM.render(
+    helMsg,
+    document.getElementById("root")
+);
