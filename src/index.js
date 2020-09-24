@@ -112,7 +112,7 @@ function Item(props) {
           name : "Naim"
       }
       render(){
-      return <h3>{this.state.name}</h3>
+      return <h3>Hello {this.state.name}</h3>
       }
   }
 
@@ -123,3 +123,27 @@ function Item(props) {
       document.getElementById("root")
   );
 
+  //setState 
+
+  class Counter extends React.Component{
+      state = {
+          counter : 0 
+      }
+      increment = () => {
+          this.setState({counter: this.state.counter+1});
+      }
+
+      render(){
+          return <div>
+              <p>{this.state.counter}</p>
+              <button onClick={this.increment} >Click to Increment</button>
+          </div>
+      }
+  }
+
+  const el = <Counter/>;
+
+  ReactDOM.render(
+      el,
+      document.getElementById("root")
+  );
