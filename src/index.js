@@ -170,6 +170,7 @@ function Item(props) {
     function increment() {
       setCounter(counter+1);
     }
+
     return <div>
     <p>{counter}</p>
     <button onClick={increment}>Increment</button>
@@ -181,3 +182,15 @@ function Item(props) {
     el, 
     document.getElementById('root')
   );
+
+
+  //LifeCycle Method   1-componentDidMount 2-componentWillUnmount
+  //componentDidUpdate 
+ /* componentDidMount() {
+    this.setState({counter: 42});
+  }*/
+
+  //componentDidUpdate
+  /*componentDidUpdate() {
+    alert("Number of clicks: " + this.state.counter);
+  }*/
