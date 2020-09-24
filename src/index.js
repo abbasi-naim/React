@@ -62,3 +62,13 @@ ReactDOM.render(
     testMsg,
     document.getElementById("root")
 );
+
+//component using component
+
+function Comp() {
+    return <h5>
+        <Test title="B" />
+        <Test title="C"/>
+    </h5>
+    
+};
