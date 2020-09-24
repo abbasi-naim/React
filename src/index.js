@@ -27,5 +27,11 @@ setInterval(show,2000);
 //here is functional component example 
 
 function HelloWorld() {
-    return <div>Willkommen auf {name} Seite.</div>
+    return <h1>Willkommen auf {name} Seite.</h1>
 }
+const helloMsg = <HelloWorld/>
+ReactDOM.render(
+    helloMsg,
+    document.getElementById("root")
+);
+
