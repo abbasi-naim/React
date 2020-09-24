@@ -82,11 +82,13 @@ class Mein extends React.Component{
 }
 
 //Create Shopping List  Example
+/*
 function List() {
     return <div>
     <Item name="Cheese" price="4.50" ></Item>
 <Item name="Fruit" price="3.50"></Item>
 <Item name="gemuse" price="2.5"></Item>
+<Item name="Kleidung" price="59"></Item>
 </div>
 }
 
@@ -101,6 +103,23 @@ function Item(props) {
 
   ReactDOM.render(
       result,
+      document.getElementById("root")
+  );
+*/
+  //State 
+  class Stat extends React.Component{
+      state = { 
+          name : "Naim"
+      }
+      render(){
+      return <h3>{this.state.name}</h3>
+      }
+  }
+
+  const re = <Stat/>;
+
+  ReactDOM.render(
+      re,
       document.getElementById("root")
   );
 
