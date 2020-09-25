@@ -351,3 +351,13 @@ function addPerson(person) {
   }
   
 }
+
+//reducer function 
+function contactsApp(state, action) {
+  switch (action.type) {
+    case 'ADD_CONTACT':
+      return [ ...state,  action.person ]
+    default:
+      return state
+  }
+}
