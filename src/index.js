@@ -333,3 +333,11 @@ ReactDOM.render(
   <ContactManager data={contacts} />, 
   document.getElementById('root')
 );
+
+
+//Redux  -- create valid action object
+/*
+{
+  type : 'APPLY_DISCOUNT',  // Snake Case  All letters are UPPERCASE with underscore
+  percent: '25'
+}*/
