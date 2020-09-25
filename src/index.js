@@ -234,7 +234,7 @@ function Item(props) {
 
 */
   //Example Event Handler 
-
+/*
   function AddForm() {
     const [sum, setSum] = useState(0);
     const [num, setNum] = useState(0);
@@ -259,3 +259,77 @@ function Item(props) {
   
   const el = <AddForm />;
   ReactDOM.render(el, document.getElementById("root"));
+  */
+
+//Rendering A list
+/*
+const arr = ["X" , "Y" , "Z" , "W"];
+const elemen = <MyList data = {arr} />;
+
+function MyList(props) {
+    const arr = props.data;
+    const ListItem = arr.map((val) => 
+    <li>{val}</li>
+    );
+return <ul>{ListItem}</ul>;    
+}
+
+ReactDOM.render(
+    elemen,
+    document.getElementById("root")
+);
+*/
+
+//Example - create Contact Manager
+
+function AddPersonForm(props) {
+  const [ person, setPerson ] = useState('');
+    
+  function handleChange(e) {
+    setPerson(e.target.value);
+  }
+    
+  function handleSubmit(e) {
+    props.handleSubmit(person);
+    setPerson('');
+    e.preventDefault();
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" 
+        placeholder="Add new contact" 
+        onChange={handleChange} 
+        value={person} />
+      <button type="submit">Add</button>
+    </form>
+  );
+}
+
+function PeopleList(props) {
+  const arr = props.data;
+  const listItems = arr.map((val, index) =>
+    <li key={index}>{val}</li>
+  );
+  return <ul>{listItems}</ul>;
+}
+
+function ContactManager(props) {
+  const [contacts, setContacts] = useState(props.data);
+
+  function addPerson(name) {
+    setContacts([...contacts, name]);
+  }
+
+  return (
+    <div>
+      <AddPersonForm handleSubmit={addPerson} />
+      <PeopleList data={contacts} />
+    </div>
+  );
+}
+const contacts = [];
+
+ReactDOM.render(
+  <ContactManager data={contacts} />, 
+  document.getElementById('root')
+);
