@@ -341,3 +341,13 @@ ReactDOM.render(
   type : 'APPLY_DISCOUNT',  // Snake Case  All letters are UPPERCASE with underscore
   percent: '25'
 }*/
+
+//Action Creators 
+ 
+function addPerson(person) {
+  return{
+    type:'ADD_CONTACT',
+    payload: person
+  }
+  
+}
