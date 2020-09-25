@@ -164,8 +164,8 @@ function Item(props) {
   );
 */
   // rewrite counter app using hook
-  function Counter() {
-    const [counter, setCounter] = useState(0);
+//   function Counter() {
+//     const [counter, setCounter] = useState(0);
 
     // useEffect(() => {
     //     alert("Number of clicks: " + counter);
@@ -175,22 +175,22 @@ function Item(props) {
         //do something
       }, [counter]);  */
   
-    function increment() {
-      setCounter(counter+1);
-    }
+    // function increment() {
+    //   setCounter(counter+1);
+    // }
     //Event Handler -- button  you should write function name in curley braces
-    return <div>
-    <p>{counter}</p>
-    <button onClick={increment}>Increment</button> 
-    </div>;
-  }
+//     return <div>
+//     <p>{counter}</p>
+//     <button onClick={increment}>Increment</button> 
+//     </div>;
+//   }
   
   
-  const el = <Counter />; 
-  ReactDOM.render(
-    el, 
-    document.getElementById('root')
-  );
+//   const el = <Counter />; 
+//   ReactDOM.render(
+//     el, 
+//     document.getElementById('root')
+//   );
 
 
   //LifeCycle Method   1-componentDidMount 2-componentWillUnmount
@@ -204,3 +204,30 @@ function Item(props) {
     alert("Number of clicks: " + this.state.counter);
   }*/
 
+
+  //Handling User Input -Example 
+
+  function Converter() {
+      const [km,setKm]= useState(0);
+
+      function handleChange(e) {
+          setKm(e.target.value);
+      }
+      function convert(km) {
+          return (km/1.609).toFixed(2);
+          
+      }
+
+      return <div>
+          <input type="text" value={km} onChange={handleChange}  />
+    <p>km is {convert(km)} miles</p>
+      </div>
+      
+  }
+
+  const resu = <Converter/>;
+
+  ReactDOM.render(
+      resu,
+      document.getElementById("root")
+  );
