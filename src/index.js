@@ -171,19 +171,20 @@ function Item(props) {
     //     alert("Number of clicks: " + counter);
     //   });
 // the useEffect() method will run only if count changes.
-    useEffect(() => {
+    /*useEffect(() => {
         //do something
-      }, [counter]);  
+      }, [counter]);  */
   
     function increment() {
       setCounter(counter+1);
     }
-
+    //Event Handler -- button  you should write function name in curley braces
     return <div>
     <p>{counter}</p>
-    <button onClick={increment}>Increment</button>
+    <button onClick={increment}>Increment</button> 
     </div>;
   }
+  
   
   const el = <Counter />; 
   ReactDOM.render(
@@ -202,3 +203,4 @@ function Item(props) {
   /*componentDidUpdate() {
     alert("Number of clicks: " + this.state.counter);
   }*/
+
